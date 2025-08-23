@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Erpicoding</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <section id="headerSection"></section>
+  <header>
+    <nav class="navbar">
+      <a href="#headerSection">
+        <img class="profileImage" src="./profileImage.png" />
+      </a>
+      <a class="navbarLink" href="#section1">Über Mich</a>
+      <a class="navbarLink" href="#section2">Links</a>
+      <a class="navbarLink" href="#section3">Projekte</a>
+      <a class="navbarLink" href="#section4"></a>
+    </nav>
+    <div class="banner">
+      <h1>ERPI CODING</h1>
+      <h2>Web-Developer</h2>
+      <a href="#section3" class="bannerLink">Projekte &rarr;</a>
+    </div>
+  </header>
+  <body>
+    <section class="contentSection" id="section1">
+      <h2 class="sectionHeading">Über Mich</h2>
+      <p class="infotext">
+        Ich programmiere seit 2024 Webseiten mit HTML, CCC und JavaScript. 2025
+        habe ich auch angefangen mit node.js Webserver und Backends zu
+        programmieren.
+      </p>
+      <h3>Programmiersprachen und andere Technologien</h3>
+      <div class="languageSelector">
+        <button class="language" onclick="selectLanguage(1)" id="select1">
+          HTML
+        </button>
+        <button class="language" onclick="selectLanguage(2)" id="select2">
+          CSS
+        </button>
+        <button class="language" onclick="selectLanguage(3)" id="select3">
+          JavaScript
+        </button>
+        <button class="language" onclick="selectLanguage(4)" id="select4">
+          node.js
+        </button>
+      </div>
+      <div class="infotext">
+        <img id="languageLogo" />
+        <p id="languageText"></p>
+        <p id="languageLogoSource"></p>
+      </div>
+    </section>
+    <section class="contentSection" id="section2">
+      <h2 class="sectionHeading">Links</h2>
+    </section>
+    <section class="contentSection" id="section3">
+      <h2 class="sectionHeading">Projekte</h2>
+    </section>
+    <section class="contentSection" id="section4">
+      <h2 class="sectionHeading"></h2>
+    </section>
+    <footer></footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
