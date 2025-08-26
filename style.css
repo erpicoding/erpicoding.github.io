@@ -80,7 +80,6 @@ header {
   display: flex;
   flex-direction: row;
   align-content: center;
-  justify-content: space-between;
 }
 .navbarLink {
   height: 60px !important;
