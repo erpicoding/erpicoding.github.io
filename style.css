@@ -30,12 +30,15 @@ header {
 
   position: absolute;
   display: flex;
-  align-items: center;
 
   border-radius: 30px;
+
+  transition: 500ms;
 }
 .navbarFixed {
   position: fixed;
+  display: flex;
+
   top: 0px;
   left: 0px;
   z-index: 10;
@@ -44,32 +47,68 @@ header {
   box-shadow: 0 0 5px var(--petrol-transparent);
 
   backdrop-filter: blur(5px);
+
+  transition: 500ms;
 }
 .profileImage {
   height: 40px;
   width: 40px;
-  margin: 10px;
+  margin: 7.5px 10px 7.5px 10px;
 
-  border: white solid 2px;
-  border-radius: 22px;
+  border: white solid 2.5px;
+  border-radius: 21.25px;
 }
-.navbarLink {
+.navbarButton {
   height: 60px;
-  margin: 20px;
+  margin: 0 20px 0 20px;
+  margin-right: 0px;
 
   align-content: center;
 
   text-decoration: none;
   font-weight: 600;
   font-size: 24px;
+
+  background-color: hsla(0, 0%, 0%, 0);
+  border: none;
+  visibility: hidden;
 }
 .navbarLink {
+  height: 60px;
+  margin: 0 20px 0 20px;
+
+  align-content: center;
+  z-index: 16;
+
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 24px;
+
   transition: 500ms;
 }
 .navbarLink:hover {
   transition: all 500ms;
   /*color: var(--grey-light);*/
   font-weight: 800;
+}
+@media (max-width: 600px) {
+  .linkContainer {
+    width: calc(100% - 180px);
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 0px;
+
+    transition: 500ms;
+  }
+  .navbarButton {
+    visibility: visible;
+  }
+}
+.showLinks {
+  height: 180px;
+  transition: 500ms;
 }
 .banner {
   display: flex;
@@ -100,6 +139,7 @@ header {
   margin: 0px;
   padding: 5px;
 
+  align-content: center;
   font-weight: bold;
   text-decoration: none;
   border: white solid 2px;
@@ -139,6 +179,7 @@ h6 {
   border-radius: 25px;
 
   font-size: larger;
+  overflow: hidden;
 }
 
 div.languageSelector {
@@ -152,6 +193,7 @@ div.languageSelector {
 button.language {
   width: auto;
   height: 50px;
+  min-width: 50px;
   flex-grow: 1;
 
   background-color: var(--petrol-transparent);
@@ -177,11 +219,19 @@ button.language:hover {
 
   float: left;
 }
+@media (max-width: 400px) {
+  #languageText {
+    clear: left !important;
+  }
+}
+
 #languageLogoSource {
   clear: left;
   font-size: 12px;
+  text-wrap: wrap;
 }
-
+/* Linktree sction
+*/
 .linksBg {
   display: flex;
   flex-direction: column;

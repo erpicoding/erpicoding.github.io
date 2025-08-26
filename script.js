@@ -1,5 +1,6 @@
 const arrowToTop = document.getElementById("arrowToTop");
 const navbar = document.querySelector(".navbar");
+const linkContainer = document.getElementById("linkContainer");
 
 window.addEventListener("scroll", function () {
   const scrollHeight = window.pageYOffset;
@@ -12,8 +13,12 @@ window.addEventListener("scroll", function () {
   }
 });
 
-selectLanguage(3);
+function navbarToggle() {
+  linkContainer.classList.toggle("showLinks");
+  navbar.classList.toggle("showLinks");
+}
 
+selectLanguage(3);
 function selectLanguage(languageId) {
   for (let i = 1; i <= 4; i++) {
     document.getElementById("select" + i).style.flexGrow = "1";
