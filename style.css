@@ -30,6 +30,7 @@ header {
 
   position: absolute;
   display: flex;
+  flex-direction: row;
 
   border-radius: 30px;
 
@@ -38,6 +39,7 @@ header {
 .navbarFixed {
   position: fixed;
   display: flex;
+  flex-direction: row;
 
   top: 0px;
   left: 0px;
@@ -73,16 +75,25 @@ header {
   border: none;
   visibility: hidden;
 }
+.linkContainer {
+  width: calc(100% - 100px);
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
 .navbarLink {
-  height: 60px;
+  height: 60px !important;
   margin: 0 20px 0 20px;
 
+  display: flex;
   align-content: center;
   z-index: 16;
 
   text-decoration: none;
   font-weight: 600;
   font-size: 24px;
+  line-height: 60px;
 
   transition: 500ms;
 }
