@@ -8,8 +8,14 @@ window.addEventListener("scroll", function () {
 
   if (scrollHeight > navbarHeight) {
     navbar.classList.add("navbarFixed");
+    if (navbar.classList.length == 3) {
+      navbarToggle();
+    }
   } else {
     navbar.classList.remove("navbarFixed");
+    if (navbar.classList.length == 2) {
+      navbarToggle();
+    }
   }
 });
 
