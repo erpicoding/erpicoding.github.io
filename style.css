@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 :root {
+  --bg-black: hsl(0, 0%, 0%);
+  --bg-grey: hsl(0, 0%, 15%);
+  --invisible: hsla(0, 0%, 0%, 0);
   --petrol-transparent: rgba(63, 208, 212, 0.5);
   --petrol-ultra-transparent: rgba(63, 207, 212, 0.2);
   --petrol-dark-transparent: rgba(63, 207, 212, 0.25);
-  --petrol-solid: #20686a;
-  --grey-light: #b9b9b9;
+  --petrol-solid: hsl(182, 54%, 27%);
+  --petrol-glow: hsl(182, 100%, 50%);
+
+  --gradient1a: hsl(56, 100%, 56%);
+  --gradient1b: hsl(111, 100%, 54%);
 }
 * {
   font-family: "Ubuntu", sans-serif;
@@ -16,11 +22,64 @@
 html {
   width: 100%;
 }
+/*  HA-Madal
+*/
+dialog#ha:not([open]) {
+  display: none;
+}
+dialog#ha {
+  width: 100%;
+  height: 100%;
+
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: black;
+  color: white;
+  border: none;
+}
+dialog#ha::backdrop {
+  background: black;
+  opacity: 1;
+}
+dialog#ha > img {
+  width: 100%;
+}
+dialog#ha > a {
+  height: 40px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  margin: 10px;
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 20px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+
+  background: linear-gradient(black, black) padding-box,
+    linear-gradient(
+        45deg,
+        var(--gradient1a) 0%,
+        var(--petrol-glow) 50%,
+        var(--gradient1b) 100%
+      )
+      border-box;
+  border: solid 2px transparent;
+}
+
 /*header bild*/
 header {
   min-height: 100vh;
   background: linear-gradient(var(--petrol-transparent), rgba(0, 0, 0, 0.7)),
-    url(./headerBackground.png) center/cover no-repeat;
+    url(.//img/headerBackground.png) center/cover no-repeat;
 }
 /*header link liste*/
 .navbar {
@@ -98,8 +157,7 @@ header {
 }
 .navbarLink:hover {
   transition: all 500ms;
-  /*color: var(--grey-light);*/
-  font-weight: 800;
+  scale: 1.05;
 }
 @media (max-width: 600px) {
   .linkContainer {
@@ -141,6 +199,7 @@ header {
   box-shadow: inset 0 0 5px black;
 
   border-radius: 25px;
+  transition: 500ms;
 }
 .bannerLink {
   height: 20px;
@@ -152,21 +211,46 @@ header {
   align-content: center;
   font-weight: bold;
   text-decoration: none;
-  border: white solid 2px;
   border-radius: 20px;
   transition: 500ms;
 }
-.bannerLink:hover {
-  background-color: white;
-  color: var(--petrol-solid);
-
-  transition: all 500ms;
+.fancyBorder {
+  background: linear-gradient(var(--petrol-solid), var(--petrol-solid))
+      padding-box,
+    linear-gradient(
+        45deg,
+        var(--gradient1a) 0%,
+        var(--petrol-glow) 50%,
+        var(--gradient1b) 100%
+      )
+      border-box;
+  border: solid 2px transparent;
 }
 
+.banner,
+.bannerLink {
+  transition: transform 500ms ease;
+}
+
+.banner,
+.bannerLink {
+  transition: transform 500ms ease;
+}
+
+.banner:hover {
+  transform: rotate(-180deg);
+}
+.banner:hover .bannerLink {
+  transform: rotate(180deg);
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Header ende
+ 
+*/
 body {
-  background-color: black;
-  min-height: 1500px;
+  background-color: var(--bg-black);
 }
+
 section.contentSection {
   min-height: 500px;
   padding-top: 80px;
@@ -184,7 +268,7 @@ h6 {
   padding: 25px;
   margin: 25px;
 
-  background-color: var(--petrol-transparent);
+  background-color: var(--bg-grey);
   box-shadow: inset 0 0 5px black;
   border-radius: 25px;
 
@@ -197,17 +281,23 @@ div.languageSelector {
   direction: row;
   justify-content: center;
 
-  padding: 25px;
-  border-radius: 20px;
+  width: calc(100% - 100px);
+  padding: 0px;
+  margin: 25px;
+
+  border-radius: 29px;
+  gap: 4px;
+
+  background-color: var(--bg-grey);
+  box-shadow: inset 0 0 5px black;
 }
 button.language {
   width: auto;
-  height: 50px;
+  height: 40px;
   min-width: 50px;
   flex-grow: 1;
 
   background-color: var(--petrol-transparent);
-  box-shadow: inset black 0 0 5px;
 
   border: none;
   border-radius: 25px;
@@ -247,7 +337,7 @@ button.language:hover {
   flex-direction: column;
   min-height: 100vh;
   background: linear-gradient(var(--petrol-transparent), rgba(0, 0, 0, 0.7)),
-    url(./linksBackground.png) center/cover no-repeat;
+    url(./img/linksBackground.png) center/cover no-repeat;
   align-items: center;
 }
 .linksBg a {
