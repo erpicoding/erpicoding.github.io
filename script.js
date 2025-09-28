@@ -3,13 +3,13 @@ const navbar = document.querySelector(".navbar");
 const body = document.querySelector("body");
 const linkContainer = document.getElementById("linkContainer");
 
-const ha = document.getElementById("ha");
-if (localStorage.getItem("openHA") == null) {
-  ha.showModal();
-  localStorage.setItem("openHA", true);
-} else {
-  ha.close();
-}
+// const ha = document.getElementById("ha");
+// if (localStorage.getItem("openHA") == null) {
+//   ha.showModal();
+//   localStorage.setItem("openHA", true);
+// } else {
+//   ha.close();
+// }
 
 window.addEventListener("scroll", function () {
   const scrollHeight = window.pageYOffset;
