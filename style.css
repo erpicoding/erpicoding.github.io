@@ -80,7 +80,7 @@ dialog#ha > a {
 header {
   min-height: 100vh;
   background: linear-gradient(var(--petrol-transparent), rgba(0, 0, 0, 0.7)),
-    url(.//img/headerBackground.png) center/cover no-repeat;
+    url(./img/headerBackground.png) center/cover no-repeat;
 }
 /*header link liste*/
 .navbar {
@@ -134,12 +134,13 @@ header {
   background-color: hsla(0, 0%, 0%, 0);
   border: none;
   visibility: hidden;
+  display: none;
 }
 .linkContainer {
-  width: calc(100% - 100px);
+  width: calc(100% - 0px);
   display: flex;
   flex-direction: row;
-  align-content: center;
+  justify-content: end;
 }
 .navbarLink {
   height: 60px !important;
@@ -173,6 +174,7 @@ header {
   }
   .navbarButton {
     visibility: visible;
+    display: block;
   }
 }
 .showLinks {
@@ -270,8 +272,10 @@ h6 {
   margin: 25px;
 
   background-color: var(--bg-grey);
-  box-shadow: inset 0 0 5px black;
   border-radius: 25px;
+
+  background: linear-gradient(0deg, hsl(0, 0%, 5%), hsl(0, 0%, 10%));
+  box-shadow: inset 0 1px 2px hsl(0, 0%, 30%);
 
   font-size: larger;
   overflow: hidden;
@@ -291,12 +295,16 @@ div.languageSelector {
   gap: 4px;
 
   background-color: var(--bg-grey);
-  box-shadow: inset 0 0 5px black;
+  background: linear-gradient(0deg, hsl(0, 0%, 5%), hsl(0, 0%, 10%));
+  box-shadow: inset 0 1px 2px hsl(0, 0%, 30%);
 }
 #languageSelectorBg {
   position: absolute;
   width: 25%;
-  height: 40px;
+  height: 32px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+
   border-radius: 30px;
   background-color: var(--petrol-solid);
 
@@ -313,8 +321,8 @@ button.language {
   border: none;
   border-radius: 25px;
 
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 500;
 
   position: relative;
   z-index: 10;
@@ -394,6 +402,9 @@ button.language:hover {
 
   border-radius: 40px 40px 0 0;
   background-color: var(--bg-grey);
+
+  background: linear-gradient(0deg, hsl(0, 0%, 5%), hsl(0, 0%, 10%));
+  box-shadow: inset 0 1px 1px hsl(0, 0%, 30%);
 }
 .projekt img {
   border-radius: 0 0 40px 40px;
