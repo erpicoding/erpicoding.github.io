@@ -33,10 +33,10 @@
         </div>
         <button class="navbarButton" onclick="navbarToggle()">Menu</button>
       </nav>
-      <div class="banner">
+      <div class="banner animatedBorder">
         <h1>ERPI CODING</h1>
         <h2>Web-Developer</h2>
-        <a href="#section3" class="bannerLink fancyBorder">Projekte &rarr;</a>
+        <a href="#section3" class="bannerLink">Projekte &rarr;</a>
       </div>
     </header>
     <section class="contentSection" id="section1">
@@ -47,25 +47,23 @@
         programmieren.
       </p>
       <h2>Programmiersprachen und andere Technologien</h2>
-      <div class="languageSelector">
-        <div id="languageSelectorBg"></div>
-        <button class="language" onclick="selectLanguage(1)" id="select1">
-          HTML
-        </button>
-        <button class="language" onclick="selectLanguage(2)" id="select2">
-          CSS
-        </button>
-        <button class="language" onclick="selectLanguage(3)" id="select3">
-          JavaScript
-        </button>
-        <button class="language" onclick="selectLanguage(4)" id="select4">
-          node.js
-        </button>
-      </div>
-      <div class="infotext">
-        <img id="languageLogo" />
-        <p id="languageText"></p>
-        <p id="languageLogoSource"></p>
+      <div class="technologies">
+        <div class="technology">
+          <img class="logo" src="./img/html.webp" />
+          <p>HTML<br /><span>Markup Language</span></p>
+        </div>
+        <div class="technology">
+          <img class="logo" src="./img/CSS_logo.svg" />
+          <p>CSS<br /><span>Stylesheet Language</span></p>
+        </div>
+        <div class="technology">
+          <img class="logo" src="./img/js_logo.svg" />
+          <p>JavaScript<br /><span>Programming Language</span></p>
+        </div>
+        <div class="technology">
+          <img class="logo" src="./img/node_logo.svg" />
+          <p>node.js<br /><span>Runtime environment</span></p>
+        </div>
       </div>
     </section>
     <section class="contentSection linksBg" id="section2">

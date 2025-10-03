@@ -9,9 +9,7 @@
   --petrol-solid: hsl(182, 54%, 27%);
   --petrol-glow: hsl(182, 100%, 50%);
 
-  --gradient1a: hsl(56, 100%, 56%);
-  --gradient1b: hsl(182, 100%, 50%);
-  --gradient1c: hsl(111, 100%, 54%);
+  --gradient1: hsl(56, 100%, 56%);
 }
 * {
   font-family: "Ubuntu", sans-serif;
@@ -199,7 +197,7 @@ header {
 
   backdrop-filter: blur(5px);
   background-color: var(--petrol-ultra-transparent);
-  box-shadow: inset 0 0 5px black;
+  box-shadow: inset 0 2px 4px hsl(0, 0%, 30%);
 
   border-radius: 25px;
   transition: 500ms;
@@ -217,34 +215,39 @@ header {
   border-radius: 20px;
   transition: 500ms;
 }
-.fancyBorder {
-  background: linear-gradient(var(--petrol-solid), var(--petrol-solid))
-      padding-box,
-    linear-gradient(
-        45deg,
-        var(--gradient1a) 0%,
-        var(--petrol-glow) 50%,
-        var(--gradient1b) 100%
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.animatedBorder {
+  background: linear-gradient(0deg, hsl(0, 0%, 5%), hsl(0, 0%, 10%)) padding-box,
+    conic-gradient(
+        from var(--angle),
+        var(--invisible) 0%,
+        var(--gradient1) 10%,
+        var(--invisible) 20%,
+        var(--invisible) 50%,
+        var(--gradient1) 60%,
+        var(--invisible) 70%
       )
       border-box;
   border: solid 2px transparent;
-}
 
-.banner,
-.bannerLink {
-  transition: transform 500ms ease;
+  animation: 3s linear rotation infinite;
+  animation-play-state: paused;
 }
-
-.banner,
-.bannerLink {
-  transition: transform 500ms ease;
+.animatedBorder:hover {
+  animation-play-state: running;
 }
-
-.banner:hover {
-  transform: rotate(-180deg);
-}
-.banner:hover .bannerLink {
-  transform: rotate(180deg);
+@keyframes rotation {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  Header ende
@@ -281,75 +284,49 @@ h6 {
   overflow: hidden;
 }
 
-div.languageSelector {
+.technologies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 80px);
+  grid-gap: 20px;
+  padding: 20px;
+}
+.technology {
+  height: 80px;
+  gap: 20px;
+
   display: flex;
-  direction: row;
-  justify-content: space-around;
-  position: relative;
+  flex-direction: row;
 
-  width: calc(100% - 50px);
-  padding: 0px;
-  margin: 25px;
-
-  border-radius: 29px;
-  gap: 4px;
-
-  background-color: var(--bg-grey);
   background: linear-gradient(0deg, hsl(0, 0%, 5%), hsl(0, 0%, 10%));
   box-shadow: inset 0 1px 2px hsl(0, 0%, 30%);
+  border-radius: 20px;
 }
-#languageSelectorBg {
-  position: absolute;
-  width: calc(25% - 8px);
-  height: 32px;
-  margin: 4px;
-
-  border-radius: 30px;
-  background-color: var(--petrol-solid);
-
-  transition: 500ms;
-}
-button.language {
-  width: auto;
-  height: 40px;
-  min-width: 50px;
-  width: 25%;
-
-  background-color: var(--invisible);
-
-  border: none;
-  border-radius: 25px;
-
-  font-size: 16px;
+.technology p {
+  margin: 10px;
+  margin-left: 0px;
   font-weight: 500;
-
-  position: relative;
-  z-index: 10;
-
-  transition: 500ms ease-in-out;
 }
-button.language:hover {
-  cursor: pointer;
+.technology p span {
+  color: hsl(0, 0%, 60%);
+  font-weight: 400;
 }
-#languageLogo {
-  width: 150px;
-  height: 150px;
-
-  margin-right: 20px;
-  margin-bottom: 20px;
-
-  float: left;
+.logo {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
 }
-@media (max-width: 400px) {
-  #languageText {
-    clear: left !important;
+@media (max-width: 900px) {
+  .technologies {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 80px);
   }
 }
-
-#languageLogoSource {
-  clear: left;
-  font-size: 12px;
-  text-wrap: wrap;
+@media (max-width: 600px) {
+  .technologies {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 80px);
+  }
 }
 /* Linktree sction
 */
