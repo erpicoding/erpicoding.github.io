@@ -300,10 +300,9 @@ div.languageSelector {
 }
 #languageSelectorBg {
   position: absolute;
-  width: 25%;
+  width: calc(25% - 8px);
   height: 32px;
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin: 4px;
 
   border-radius: 30px;
   background-color: var(--petrol-solid);
