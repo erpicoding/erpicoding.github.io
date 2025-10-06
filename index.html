@@ -50,7 +50,11 @@
         <h2>Programmiersprachen und andere Technologien</h2>
         <div class="technologies">
           <div class="technology">
-            <img class="logo scratch" src="./img/logos/scratch.png" />
+            <img
+              id="scratch"
+              class="logo scratch"
+              src="./img/logos/scratch.png"
+            />
             <div class="line"></div>
             <p>Scratch<br /><span>seit 2020</span></p>
           </div>
@@ -70,7 +74,7 @@
             <p>SCSS<br /><span>seit 2025</span></p>
           </div>
           <div class="technology">
-            <img class="logo" src="./img/logos/js.svg" />
+            <img class="logo js" src="./img/logos/js.svg" />
             <div class="line"></div>
             <p>JavaScript<br /><span>seit 2024</span></p>
           </div>
@@ -118,6 +122,13 @@
         </div>
       </div>
     </section>
+
+    <dialog id="newRecord" class="newRecord">
+      <h1>Neuer Rekord:</h1>
+      <div><h1 id="recordField"></h1></div>
+      <p>Versuche: <span id="trysField"></span></p>
+      <button onclick="newRecord.close()">Fertig</button>
+    </dialog>
     <script src="./script.js"></script>
   </body>
 </html>

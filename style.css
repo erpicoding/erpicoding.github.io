@@ -281,15 +281,18 @@ h6 {
   margin: 10px;
   margin-right: 0px;
 }
+.technology .js {
+  border-radius: 8px;
+}
 .technology .scratch {
-  transition: ease-out all 60s;
+  transition: ease-out all 600s;
 }
 .technology .scratch:hover {
-  transform: translateY(-3000px);
+  transform: translateY(-30000px);
 }
 .technology .react {
   transform: rotate(var(--angle));
-  animation: 30s linear rotation infinite;
+  animation: 60s linear rotation infinite;
 }
 
 @media (max-width: 900px) {
@@ -376,4 +379,56 @@ h6 {
 .projektContainer .projekt:hover a {
   z-index: 10;
   transition: 500ms;
+}
+
+dialog.newRecord {
+  padding: 40px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background: linear-gradient(0deg, hsl(0, 0%, 10%), hsl(0, 0%, 15%));
+  box-shadow: inset 0 2px 4px hsl(0, 0%, 30%);
+  border-radius: 20px;
+  border: none;
+}
+dialog.newRecord:not([open]) {
+  display: none;
+}
+dialog.newRecord::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+dialog.newRecord div {
+  min-width: 120px;
+  height: 60px;
+  padding: 10px;
+  margin: auto;
+  margin-top: 20px;
+  background: linear-gradient(0deg, hsl(120, 100%, 30%), hsl(120, 100%, 40%));
+  box-shadow: inset 0 2px 4px hsl(120, 100%, 50%);
+  border-radius: 20px;
+}
+dialog.newRecord div h1 {
+  line-height: 60px;
+  font-size: 60px;
+}
+dialog.newRecord p {
+  padding: 8px;
+  margin-top: 20px;
+  text-align: center;
+  color: red;
+}
+dialog.newRecord p span {
+  color: red;
+}
+dialog.newRecord button {
+  height: 40px;
+  width: 200px;
+  margin: auto;
+  background: linear-gradient(0deg, hsl(0, 0%, 20%), hsl(0, 0%, 25%));
+  box-shadow: inset 0 1px 2px hsl(0, 0%, 40%);
+  border: none;
+  border-radius: 20px;
 }/*# sourceMappingURL=style.css.map */
