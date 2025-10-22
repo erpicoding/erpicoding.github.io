@@ -7,6 +7,7 @@ const scratch = document.getElementById("scratch");
 const scratchStartRect = scratch.getBoundingClientRect();
 if (localStorage.getItem("scratchRecordHeight") == null) {
   localStorage.setItem("scratchRecordHeight", 0);
+  localStorage.setItem("scratchTrysTotal", 0);
   localStorage.setItem("scratchTrys", 0);
 }
 // const ha = document.getElementById("ha");
@@ -50,18 +51,23 @@ scratch.addEventListener("mouseout", () => {
   const scratchRect = scratch.getBoundingClientRect();
   const scratchHeight = Math.abs(scratchRect.top - scratchStartRect.top);
   const scratchRecordHeight = localStorage.getItem("scratchRecordHeight");
+  let scratchTrysTotal = localStorage.getItem("scratchTrysTotal");
   let scratchTrys = localStorage.getItem("scratchTrys");
-  scratchTrys++;
   console.log("scratchHeight: " + scratchHeight);
-
-  //Versuche counter
-  localStorage.setItem("scratchTrys", scratchTrys);
-  trysField.innerHTML = scratchTrys;
 
   if (scratchHeight > scratchRecordHeight) {
     localStorage.setItem("scratchRecordHeight", scratchHeight);
     console.log("NEUER REKORD");
     recordField.innerHTML = parseInt(scratchHeight);
     newRecord.showModal();
+  } else {
+    scratchTrys++;
+    localStorage.setItem("scratchTrys", scratchTrys);
   }
+
+  //Versuche counter
+  scratchTrysTotal++;
+  localStorage.setItem("scratchTrysTotal", scratchTrysTotal);
+
+  trysField.innerHTML = scratchTrys + "/" + scratchTrysTotal;
 });
