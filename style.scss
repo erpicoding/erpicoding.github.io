@@ -451,6 +451,11 @@ h6 {
     }
   }
 }
+@media (max-width: 600px) {
+  .projektContainer {
+    grid-template-columns: 1fr;
+  }
+}
 
 dialog.newRecord {
   // height: 200px;

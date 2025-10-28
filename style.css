@@ -379,6 +379,11 @@ h6 {
   font-weight: 600;
 }
 
+@media (max-width: 600px) {
+  .projektContainer {
+    grid-template-columns: 1fr;
+  }
+}
 dialog.newRecord {
   padding: 40px;
   margin: auto;
