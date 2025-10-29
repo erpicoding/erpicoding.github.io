@@ -141,7 +141,7 @@ header {
   }
 }
 .showLinks {
-  height: 120px;
+  height: 180px;
   transition: 500ms;
 }
 
@@ -213,7 +213,6 @@ body {
   }
 }
 section.contentSection {
-  min-height: 500px;
   padding-top: 80px;
 }
 
