@@ -52,7 +52,7 @@ dialog#ha a {
 /*header bild*/
 header {
   min-height: 100vh;
-  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)), url(./img/headerBackground.png) center/cover no-repeat;
+  background: linear-gradient(hsla(180, 80%, 50%, 0.5), rgba(0, 0, 0, 0.7)), url(./img/headerBackground.png) center/cover no-repeat;
 }
 
 /*header link liste*/
@@ -74,8 +74,8 @@ header {
   top: 0px;
   left: 0px;
   z-index: 10;
-  background-color: rgba(63, 208, 212, 0.5);
-  box-shadow: 0 0 5px rgba(63, 208, 212, 0.5);
+  background: linear-gradient(hsla(180, 100%, 50%, 0.5), hsla(180, 80%, 50%, 0.5));
+  box-shadow: inset 0 1px 2px hsl(182, 54%, 50%);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   transition: 500ms;
@@ -159,7 +159,7 @@ header {
   width: 300px;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
-  background-color: rgba(63, 207, 212, 0.2);
+  background-color: hsla(182, 63%, 54%, 0.2);
   box-shadow: inset 0 2px 4px hsl(0, 0%, 30%);
   border-radius: 25px;
   transition: 500ms;
@@ -335,7 +335,12 @@ h6 {
   background-color: hsl(0, 0%, 15%);
   border-radius: 8px;
 }
-.projektContainer .projekt a {
+.projektContainer .projekt .links {
+  display: flex;
+  flex-direction: row;
+}
+.projektContainer .projekt .links a {
+  width: calc(50% - 30px);
   height: 40px;
   margin: 20px;
   padding: 5px;
@@ -348,6 +353,10 @@ h6 {
   line-height: 20px;
   font-size: 20px;
   font-weight: 600;
+}
+.projektContainer .projekt .links .github {
+  background-color: hsl(0, 0%, 20%);
+  margin-left: 0px;
 }
 
 @media (max-width: 600px) {

@@ -5,12 +5,13 @@ $bg-grey: hsl(0, 0%, 15%);
 
 $invisible: hsla(0, 0%, 0%, 0);
 
-$petrol-transparent: rgba(63, 208, 212, 0.5);
-$petrol-ultra-transparent: rgba(63, 207, 212, 0.2);
-$petrol-dark-transparent: rgba(63, 207, 212, 0.25);
+$petrol-transparent: hsl(180, 80%, 50%, 0.5);
+$petrol-transparent-light: hsla(180, 100%, 50%, 0.5);
+$petrol-ultra-transparent: hsla(182, 63%, 54%, 0.2);
+$petrol-dark-transparent: hsla(182, 63%, 54%, 0.25);
 
 $petrol-solid: hsl(182, 54%, 27%);
-$petrol-glow: hsl(182, 100%, 50%);
+$petrol-glow: hsl(182, 90%, 50%);
 
 $gradient1: hsl(56, 100%, 56%);
 
@@ -106,8 +107,8 @@ header {
   left: 0px;
   z-index: 10;
 
-  background-color: $petrol-transparent;
-  box-shadow: 0 0 5px $petrol-transparent;
+  background: linear-gradient($petrol-transparent-light, $petrol-transparent);
+  box-shadow: inset 0 1px 2px hsl(182, 54%, 50%);
 
   backdrop-filter: blur(5px);
 
@@ -403,21 +404,30 @@ h6 {
       }
     }
 
-    a {
-      height: 40px;
-      margin: 20px;
-      padding: 5px;
-
-      background-color: $petrol-solid;
-      border-radius: 20px;
-
+    .links {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      line-height: 20px;
-      font-size: 20px;
-      font-weight: 600;
+      flex-direction: row;
+      a {
+        width: calc(50% - 30px);
+        height: 40px;
+        margin: 20px;
+        padding: 5px;
+
+        background-color: $petrol-solid;
+        border-radius: 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        line-height: 20px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .github {
+        background-color: hsl(0, 0%, 20%);
+        margin-left: 0px;
+      }
     }
   }
 }
