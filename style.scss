@@ -27,6 +27,10 @@ $text-grey: hsl(0, 0%, 60%);
 }
 html {
   width: 100%;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
 }
 /*  HA-Madal
 */
@@ -219,8 +223,14 @@ header {
     align-content: center;
     font-weight: bold;
     text-decoration: none;
+
+    border: 2px solid $text;
     border-radius: 20px;
-    transition: 500ms;
+    transition: 1000ms;
+    &:hover {
+      background-color: $text;
+      color: $bg-grey;
+    }
   }
 }
 

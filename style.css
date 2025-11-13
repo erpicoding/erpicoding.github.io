@@ -9,6 +9,11 @@
 
 html {
   width: 100%;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 /*  HA-Madal
@@ -172,8 +177,13 @@ header {
   align-content: center;
   font-weight: bold;
   text-decoration: none;
+  border: 2px solid hsl(0, 0%, 95%);
   border-radius: 20px;
-  transition: 500ms;
+  transition: 1000ms;
+}
+.banner .bannerLink:hover {
+  background-color: hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 15%);
 }
 
 @property --angle {
