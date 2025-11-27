@@ -9,13 +9,13 @@
 
 html {
   width: 100%;
-  scrollbar-width: none;
 }
 
-html::-webkit-scrollbar {
-  display: none;
+@supports (scrollbar-color: hsla(180, 100%, 50%, 0.5) hsl(0, 0%, 0%)) {
+  * {
+    scrollbar-color: hsla(180, 100%, 50%, 0.5) hsl(0, 0%, 0%);
+  }
 }
-
 /*  HA-Madal
 */
 dialog#ha {

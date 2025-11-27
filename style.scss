@@ -27,11 +27,13 @@ $text-grey: hsl(0, 0%, 60%);
 }
 html {
   width: 100%;
-  scrollbar-width: none;
 }
-html::-webkit-scrollbar {
-  display: none;
+@supports (scrollbar-color: $petrol-transparent-light $bg-black) {
+  * {
+    scrollbar-color: $petrol-transparent-light $bg-black;
+  }
 }
+
 /*  HA-Madal
 */
 dialog#ha {
