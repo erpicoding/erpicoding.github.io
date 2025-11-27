@@ -200,10 +200,10 @@ header {
   justify-content: space-evenly;
 
   position: relative;
-  top: calc(50vh - 75px);
+  top: calc(50vh - 90px);
   left: calc(50% - 150px);
 
-  height: 150px;
+  height: 180px;
   width: 300px;
 
   backdrop-filter: blur(5px);
@@ -213,23 +213,36 @@ header {
   border-radius: 25px;
   transition: 500ms;
 
-  .bannerLink {
-    height: 20px;
-    width: 100px;
+  .line {
+    height: 2px;
+    width: 260px;
 
-    margin: 0px;
-    padding: 5px;
+    border-radius: 1px;
 
-    align-content: center;
-    font-weight: bold;
-    text-decoration: none;
+    background-color: hsl(0, 0%, 50%);
+  }
+  .links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    .bannerLink {
+      height: 20px;
+      width: 100px;
 
-    border: 2px solid $text;
-    border-radius: 20px;
-    transition: 1000ms;
-    &:hover {
-      background-color: $text;
-      color: $bg-grey;
+      padding: 5px;
+
+      align-content: center;
+      font-weight: bold;
+      text-decoration: none;
+
+      border: 2px solid $text;
+      border-radius: 20px;
+      transition: 1000ms;
+      &:hover {
+        background-color: $text;
+        color: $bg-grey;
+      }
     }
   }
 }
