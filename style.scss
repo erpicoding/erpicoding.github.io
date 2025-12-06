@@ -99,6 +99,7 @@ header {
   position: absolute;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 
   border-radius: 30px;
 
@@ -108,6 +109,7 @@ header {
   position: fixed;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 
   top: 0px;
   left: 0px;
@@ -148,7 +150,7 @@ header {
   width: calc(100% - 0px);
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: start;
 
   .navbarLink {
     height: 60px !important;
@@ -171,6 +173,33 @@ header {
     }
   }
 }
+.languageSelector {
+  display: flex;
+  flex-direction: row;
+
+  position: absolute;
+  right: 0px;
+  button {
+    height: 42.5px;
+    width: 42.5px;
+    margin: 7.5px 10px 7.5px 0px;
+    position: relative;
+    overflow: hidden;
+
+    background-color: $invisible;
+    border: none;
+    border-radius: 50%;
+
+    border: white solid 2.5px;
+    img {
+      border-radius: 21.25px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
 @media (max-width: 600px) {
   .linkContainer {
     width: calc(100% - 180px);
@@ -185,12 +214,18 @@ header {
   .navbarButton {
     visibility: visible;
     display: block;
+    padding-right: 20px;
   }
-}
-.showLinks {
-  // for each link 60px height in this class
-  height: 180px;
-  transition: 500ms;
+  .languageSelector {
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .showLinks {
+    // for each link 60px height in this class
+    height: 240px;
+    transition: 500ms;
+  }
 }
 .banner {
   display: flex;
@@ -244,6 +279,12 @@ header {
       &:hover {
         background-color: $text;
         color: $bg-grey;
+        span {
+          color: $bg-grey;
+        }
+      }
+      span {
+        transition: 1000ms;
       }
     }
   }
@@ -318,6 +359,8 @@ h6 {
 
   background: linear-gradient(0deg, hsl(0, 0%, 5%), hsl(0, 0%, 10%));
   box-shadow: inset 0 1px 2px hsl(0, 0%, 30%);
+
+  text-wrap: balance;
 
   font-size: larger;
   overflow: hidden;

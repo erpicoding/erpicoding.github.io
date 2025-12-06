@@ -27,35 +27,45 @@
           <img class="profileImage" src="./img/profileImage.png" />
         </a>
         <div class="linkContainer" id="linkContainer">
-          <a class="navbarLink" href="#sectionInfo">Über Mich</a>
-          <a class="navbarLink" href="#sectionTechnologies">Technologien</a>
-          <a class="navbarLink" href="#sectionProjects">Projekte</a>
+          <a class="navbarLink translate1" href="#sectionInfo"></a>
+          <a class="navbarLink translate2" href="#sectionTechnologies"></a>
+          <a class="navbarLink translate3" href="#sectionProjects"></a>
+          <div class="languageSelector">
+            <button onclick="setLanguage('deutsch')">
+              <img src="./img/languages/deutsch.svg" alt="DE" height="40px" />
+            </button>
+            <button onclick='setLanguage("english")'>
+              <img src="./img/languages/english.svg" alt="EN" height="40px" />
+            </button>
+          </div>
         </div>
         <button class="navbarButton" onclick="navbarToggle()">Menu</button>
       </nav>
       <div class="banner animatedBorder">
         <h1>ERPI CODING</h1>
-        <h2>Web-Developer</h2>
+        <h2 class="translate4"></h2>
         <div class="line"></div>
         <div class="links">
           <a href="https://github.com/erpicoding" target="_blank"
             ><img src="./img/logos/github-mark-white.svg" height="30px"
           /></a>
-          <a href="#sectionProjects" class="bannerLink">Projekte &rarr;</a>
+          <a href="#sectionProjects" class="bannerLink">
+            <span class="translate3"></span> &rarr;</a
+          >
         </div>
       </div>
     </header>
     <main>
       <section class="contentSection" id="sectionInfo">
-        <h2 class="sectionHeading">Über Mich</h2>
-        <p class="infotext">
-          Ich programmiere seit 2023 Webseiten mit HTML, CSS und JavaScript.
-          2025 habe ich auch angefangen mit node.js Webserver und Backends zu
-          programmieren.
-        </p>
+        <h2 class="sectionHeading translate1"></h2>
+        <div class="infotext">
+          <p class="translate5a"></p>
+          <br />
+          <p class="translate5b"></p>
+        </div>
       </section>
       <section class="contentSection" id="sectionTechnologies">
-        <h2>Programmiersprachen und andere Technologien</h2>
+        <h2 class="translate2"></h2>
         <div class="technologies">
           <div class="technology">
             <img
@@ -64,56 +74,69 @@
               src="./img/logos/scratch.png"
             />
             <div class="line"></div>
-            <p>Scratch<br /><span>seit 2020</span></p>
+            <p>
+              Scratch<br /><span><span class="translate6"></span> 2020</span>
+            </p>
           </div>
           <div class="technology">
             <img class="logo" src="./img/logos/html.webp" />
             <div class="line"></div>
-            <p>HTML<br /><span>seit 2023</span></p>
+            <p>
+              HTML<br /><span><span class="translate6"></span> 2023</span>
+            </p>
           </div>
           <div class="technology">
             <img class="logo" src="./img/logos/css.svg" />
             <div class="line"></div>
-            <p>CSS<br /><span>seit 2023</span></p>
+            <p>
+              CSS<br /><span><span class="translate6"></span> 2023</span>
+            </p>
           </div>
           <div class="technology">
             <img class="logo" src="./img/logos/scss.svg" />
             <div class="line"></div>
-            <p>SCSS<br /><span>seit 2025</span></p>
+            <p>
+              SCSS<br /><span><span class="translate6"></span> 2025</span>
+            </p>
           </div>
           <div class="technology">
             <img class="logo js" src="./img/logos/js.svg" />
             <div class="line"></div>
-            <p>JavaScript<br /><span>seit 2024</span></p>
+            <p>
+              JavaScript<br /><span><span class="translate6"></span> 2024</span>
+            </p>
           </div>
           <div class="technology">
             <img class="logo" src="./img/logos/node.svg" />
             <div class="line"></div>
-            <p>node.js<br /><span>seit 2025</span></p>
+            <p>
+              node.js<br /><span><span class="translate6"></span> 2025</span>
+            </p>
           </div>
           <div class="technology">
             <img class="logo react" src="./img/logos/react.png" />
             <div class="line"></div>
-            <p>React<br /><span>Bald</span></p>
+            <p>React<br /><span class="translate7"></span></p>
           </div>
           <div class="technology">
             <img class="logo" src="./img/logos/nextjs.png" />
             <div class="line"></div>
-            <p>NextJS<br /><span>Bald</span></p>
+            <p>NextJS<br /><span class="translate7"></span></p>
           </div>
         </div>
       </section>
       <section class="contentSection" id="sectionProjects">
-        <h2 class="sectionHeading">Projekte</h2>
+        <h2 class="sectionHeading translate3"></h2>
         <div class="projektContainer">
           <div class="projekt">
-            <h3>Hausaufgaben-Manager</h3>
+            <h3 class="translate8"></h3>
             <img width="100%" src="./img/hausaufgaben-manager.png" />
             <p><span>HTML</span><span>CSS</span><span>JavaScript</span></p>
             <div class="links">
-              <a href="https://erpicoding.github.io/Hausaufgaben-Manager"
-                >Öffnen</a
-              >
+              <a
+                href="https://erpicoding.github.io/Hausaufgaben-Manager"
+                class="translate10"
+              ></a>
               <a
                 class="github"
                 href="https://github.com/erpicoding/Hausaufgaben-Manager"
@@ -123,13 +146,14 @@
           </div>
 
           <div class="projekt">
-            <h3>Verschlüsselungs Programm</h3>
+            <h3 class="translate9"></h3>
             <img width="100%" src="./img/smg.png" />
             <p><span>HTML</span><span>CSS</span><span>JavaScript</span></p>
             <div class="links">
-              <a href="https://erpicoding.github.io/secret-message-generator/"
-                >Öffnen</a
-              >
+              <a
+                href="https://erpicoding.github.io/secret-message-generator/"
+                class="translate10"
+              ></a>
               <a
                 class="github"
                 href="https://github.com/erpicoding/secret-message-generator/"
@@ -142,11 +166,11 @@
     </main>
 
     <dialog id="newRecord" class="newRecord">
-      <h1>Neuer Rekord:</h1>
+      <h1 class="translate11"></h1>
       <div><h1 id="recordField"></h1></div>
-      <p>Fehlgeschlagende Versuche: <span id="trysField"></span></p>
-      <button onclick="newRecord.close()">Fertig</button>
+      <p><span class="translate12"></span><span id="trysField"></span></p>
+      <button class="translate13" onclick="newRecord.close()">Fertig</button>
     </dialog>
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
   </body>
 </html>

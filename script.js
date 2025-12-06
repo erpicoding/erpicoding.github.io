@@ -10,6 +10,32 @@ if (localStorage.getItem("scratchRecordHeight") == null) {
   localStorage.setItem("scratchTrysTotal", 0);
   localStorage.setItem("scratchTrys", 0);
 }
+
+// translation
+setLanguage("english");
+async function setLanguage(language) {
+  console.log("start translation");
+  let languageData = {};
+
+  fetch("https://erpicoding.github.io/data/languageData.json")
+    .then((res) => res.json())
+    .then((data) => {
+      languageData = data;
+      console.log(languageData);
+
+      //function def start was here
+      const langData = languageData[language];
+
+      Object.keys(langData).forEach((key) => {
+        const elementGroup = document.querySelectorAll(".translate" + key);
+
+        elementGroup.forEach((element) => {
+          element.innerHTML = langData[key];
+        });
+      });
+    });
+}
+
 // const ha = document.getElementById("ha");
 // if (localStorage.getItem("openHA") == null) {
 //   ha.showModal();
