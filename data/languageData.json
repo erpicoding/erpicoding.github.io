@@ -1,0 +1,34 @@
+{
+  "deutsch": {
+    "1": "Über Mich",
+    "2": "Technologien",
+    "3": "Projekte",
+    "4": "Webseiten-Entwickler",
+    "5a": "Moin, ich bin ein Programmierer aus Deutschland. Ich setze gerne eure Projekte im Bereich Webentwicklung um: Von moderner Webseite bis zu Webanwendungen im Frontend-Bereich.",
+    "5b": "Wenn du Interesse an einer Zusammenarbeit hast, kontaktiere mich gerne!",
+    "6": "Seit",
+    "7": "Bald",
+    "8": "Hausaufgaben-Manager",
+    "9": "Verschlüsselungs-Programm",
+    "10": "Öffnen",
+    "11": "Neuer Rekord!",
+    "12": "Fehlgeschlagene Versuche: ",
+    "13": "Schließen"
+  },
+  "english": {
+    "1": "About me",
+    "2": "Skills",
+    "3": "Projects",
+    "4": "Web-Developer",
+    "5a": "Hi there, I’m a programmer from Germany. I enjoy bringing your web development projects to life: from modern websites to frontend web applications.",
+    "5b": "If you’re interested in working together, feel free to get in touch!",
+    "6": "since",
+    "7": "soon",
+    "8": "homework manager",
+    "9": "encrypting tool",
+    "10": "Open",
+    "11": "New highscore!",
+    "12": "failed trys: ",
+    "13": "close"
+  }
+}
