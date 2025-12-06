@@ -12,8 +12,16 @@ if (localStorage.getItem("scratchRecordHeight") == null) {
 }
 
 // translation
-setLanguage("english");
+//on first visit: Lang: EN
+if (localStorage.getItem("lastUsedLang") == null) {
+  setLanguage("english");
+} else {
+  setLanguage(localStorage.getItem("lastUsedLang"));
+}
+
 async function setLanguage(language) {
+  localStorage.setItem("lastUsedLang", language);
+
   console.log("start translation");
   let languageData = {};
 
