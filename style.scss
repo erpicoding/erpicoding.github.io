@@ -227,6 +227,10 @@ header {
     transition: 500ms;
   }
 }
+.bannerGrid {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+}
 .banner {
   display: flex;
   flex-direction: column;
@@ -237,11 +241,12 @@ header {
   justify-content: space-evenly;
 
   position: relative;
-  top: calc(50vh - 90px);
-  left: calc(50% - 150px);
+  top: calc(50vh);
+  left: calc(50%);
+  transform: translateY(-50%);
 
-  height: 180px;
-  width: 300px;
+  height: 400px;
+  width: 40vw;
 
   backdrop-filter: blur(5px);
   background-color: $petrol-ultra-transparent;
@@ -349,6 +354,10 @@ h5,
 h6 {
   text-align: center;
 }
+.highlightText {
+  color: $gradient1;
+}
+
 .infotext {
   width: calc(100% - 100px);
   padding: 25px;

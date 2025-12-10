@@ -27,9 +27,10 @@
           <img class="profileImage" src="./img/profileImage.png" />
         </a>
         <div class="linkContainer" id="linkContainer">
-          <a class="navbarLink translate1" href="#sectionInfo"></a>
-          <a class="navbarLink translate2" href="#sectionTechnologies"></a>
-          <a class="navbarLink translate3" href="#sectionProjects"></a>
+          <a class="navbarLink translateHeader1" href="#sectionInfo"></a>
+          <a class="navbarLink translateHeader2" href="#sectionTechnologies">
+          </a>
+          <a class="navbarLink translateHeader3" href="#sectionProjects"></a>
           <div class="languageSelector">
             <button onclick="setLanguage('deutsch')">
               <img src="./img/languages/deutsch.svg" alt="DE" height="40px" />
@@ -41,31 +42,33 @@
         </div>
         <button class="navbarButton" onclick="navbarToggle()">Menu</button>
       </nav>
-      <div class="banner animatedBorder">
-        <h1>ERPI CODING</h1>
-        <h2 class="translate4"></h2>
-        <div class="line"></div>
-        <div class="links">
-          <a href="https://github.com/erpicoding" target="_blank"
-            ><img src="./img/logos/github-mark-white.svg" height="34px"
-          /></a>
-          <a href="#sectionProjects" class="bannerLink">
-            <span class="translate3"></span> &rarr;</a
-          >
+      <div class="bannerGrid">
+        <div class="banner animatedBorder">
+          <h1 class="translateBanner1"></h1>
+          <h2 class="translateBanner2"></h2>
+          <div class="line"></div>
+          <div class="links">
+            <a href="https://github.com/erpicoding" target="_blank">
+              <img src="./img/logos/github-mark-white.svg" height="34px" />
+            </a>
+            <a href="#sectionProjects" class="bannerLink">
+              <span class="translateHeader3"></span> &rarr;
+            </a>
+          </div>
         </div>
       </div>
     </header>
     <main>
       <section class="contentSection" id="sectionInfo">
-        <h2 class="sectionHeading translate1"></h2>
+        <h2 class="sectionHeading translateHeader1"></h2>
         <div class="infotext">
-          <p class="translate5a"></p>
+          <p class="translateInfo1"></p>
           <br />
-          <p class="translate5b"></p>
+          <p class="translateInfo2"></p>
         </div>
       </section>
       <section class="contentSection" id="sectionTechnologies">
-        <h2 class="translate2"></h2>
+        <h2 class="translateHeader2"></h2>
         <div class="technologies">
           <div class="technology">
             <img
@@ -126,7 +129,7 @@
         </div>
       </section>
       <section class="contentSection" id="sectionProjects">
-        <h2 class="sectionHeading translate3"></h2>
+        <h2 class="sectionHeading translateHeader3"></h2>
         <div class="projektContainer">
           <div class="projekt">
             <h3 class="translate8"></h3>
