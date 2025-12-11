@@ -257,7 +257,7 @@ header {
 
   .line {
     height: 2px;
-    width: 260px;
+    width: 80%;
 
     border-radius: 1px;
 
@@ -292,6 +292,18 @@ header {
         transition: 1000ms;
       }
     }
+  }
+}
+@media (max-width: 600px) {
+  .bannerGrid {
+    display: flex;
+  }
+  .banner {
+    width: 80vw;
+
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
   }
 }
 

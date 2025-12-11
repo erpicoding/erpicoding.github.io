@@ -208,7 +208,7 @@ header {
 }
 .banner .line {
   height: 2px;
-  width: 260px;
+  width: 80%;
   border-radius: 1px;
   background-color: hsl(0, 0%, 50%);
 }
@@ -240,6 +240,17 @@ header {
   transition: 1000ms;
 }
 
+@media (max-width: 600px) {
+  .bannerGrid {
+    display: flex;
+  }
+  .banner {
+    width: 80vw;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+  }
+}
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
