@@ -9,12 +9,13 @@
     "Info2": "Wenn du Interesse an einer Zusammenarbeit hast, kontaktiere mich gerne!",
     "6": "Seit",
     "7": "Bald",
-    "8": "Hausaufgaben-Manager",
-    "9": "Verschlüsselungs-Programm",
-    "10": "Öffnen",
-    "11": "Neuer Rekord!",
-    "12": "Fehlgeschlagene Versuche: ",
-    "13": "Schließen"
+    "OpenProject": "Öffnen",
+    "Project1": "Hausaufgaben-Manager",
+    "Project2": "Verschlüsselungs-Programm",
+    "Project3": "Neverseen_TV Linktree",
+    "Game1": "Neuer Rekord!",
+    "Game2": "Fehlgeschlagene Versuche: ",
+    "Game3": "Schließen"
   },
   "english": {
     "Header1": "About me",
@@ -26,11 +27,12 @@
     "Info2": "If you’re interested in working together, feel free to get in touch!",
     "6": "since",
     "7": "soon",
-    "8": "homework manager",
-    "9": "encrypting tool",
-    "10": "Open",
-    "11": "New highscore!",
-    "12": "failed trys: ",
-    "13": "close"
+    "OpenProject": "Open",
+    "Project1": "homework manager",
+    "Project2": "encrypting tool",
+    "Project3": "Neverseen_TV linktree",
+    "Game1": "New highscore!",
+    "Game2": "failed trys: ",
+    "Game3": "close"
   }
 }

@@ -26,6 +26,7 @@ async function setLanguage(language) {
   let languageData = {};
 
   fetch("https://erpicoding.github.io/data/languageData.json")
+    // fetch("/erpicoding.github.io/data/languageData.json") //local
     .then((res) => res.json())
     .then((data) => {
       languageData = data;
